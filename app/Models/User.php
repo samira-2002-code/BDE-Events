@@ -22,14 +22,8 @@ class User extends Authenticatable
      *
      * @return array<string, string>
      */
-    protected function casts(): array
-    {
-        return [
-            'email_verified_at' => 'datetime',
-            'password' => 'hashed',
-        ];
-    }
-    public function events()
+
+     public function events()
     {
         return $this->hasMany(Event::class, 'created_by');
     }
@@ -38,4 +32,12 @@ class User extends Authenticatable
     {
         return $this->hasMany(Reservation::class);
     }
+    protected function casts(): array
+    {
+        return [
+            'email_verified_at' => 'datetime',
+            'password' => 'hashed',
+        ];
+    }
+   
 }

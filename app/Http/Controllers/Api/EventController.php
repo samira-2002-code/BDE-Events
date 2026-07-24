@@ -15,7 +15,13 @@ class EventController extends Controller
      */
     public function index()
     {
-        return response()->json(Event::all());
+        $events = Event::withCount('reservations')->get();
+
+        foreach ($events as $event) {
+            $event->remaining_places = $event->capacity - $event->reservations_count;
+        }
+
+        return response()->json($events);
     }
 
     /**

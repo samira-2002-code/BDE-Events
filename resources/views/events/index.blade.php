@@ -88,14 +88,23 @@
 
             </div>
 
-            <button
-                class="mt-8 w-full bg-blue-700 hover:bg-blue-800 transition text-white py-3 rounded-xl flex justify-center items-center gap-2">
+            <form action="{{ route('reservations.store') }}" method="POST">
 
-                <i data-lucide="ticket"></i>
+                @csrf
 
-                Réserver
+                <input type="hidden" name="event_id" value="{{ $event->id }}">
 
-            </button>
+                <button
+                    type="submit"
+                    class="mt-8 w-full bg-blue-700 hover:bg-blue-800 transition text-white py-3 rounded-xl flex justify-center items-center gap-2">
+
+                    <i data-lucide="ticket"></i>
+
+                    Réserver
+
+                </button>
+
+            </form>
 
         </div>
 

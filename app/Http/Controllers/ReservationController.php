@@ -24,6 +24,13 @@ class ReservationController extends Controller
         if ($event->reservations()->count() >= $event->capacity) {
             return redirect()->back()->with('error', 'Événement complet.');
         }
+        if (
+            Reservation::where('user_id', 1)
+            ->where('event_id', $event->id)
+            ->exists()
+        ) {
+            return back()->with('error', 'Vous avez déjà réservé cet événement.');
+        }
 
         $reservation = Reservation::create([
             'user_id' => 1,

@@ -1,62 +1,92 @@
-<<<<<<< HEAD
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+ BDE Events – La Billetterie du Campus ENAA
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Description
 
-## About Laravel
+BDE Events est une application web développée avec Laravel permettant la gestion des événements organisés par le Bureau des Étudiants (BDE).
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+L'application offre :
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- Un espace administrateur pour gérer les événements.
+- Un espace étudiant pour consulter les événements.
+- La réservation d'une place.
+- La génération automatique d'un ticket de réservation.
+- Une interface simple, moderne et responsive.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
+ Fonctionnalités
 
-## Learning Laravel
+ Administration
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- Authentification (Login / Register)
+- Ajouter un événement
+- Modifier un événement
+- Supprimer un événement
+- Tableau de bord administrateur
+- Affichage des réservations
+- Calcul automatique des places restantes
 
-In addition, [Laracasts](https://laracasts.com) contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+ Étudiant
 
-You can also watch bite-sized lessons with real-world projects on [Laravel Learn](https://laravel.com/learn), where you will be guided through building a Laravel application from scratch while learning PHP fundamentals.
+- Consulter les événements
+- Réserver une place
+- Génération automatique d'un ticket
+- Consultation des tickets
 
-## Agentic Development
+---
+ ** Technologies utilisées **
 
-Laravel's predictable structure and conventions make it ideal for AI coding agents like Claude Code, Cursor, and GitHub Copilot. Install [Laravel Boost](https://laravel.com/docs/ai) to supercharge your AI workflow:
+- Laravel 13
+- PHP 8
+- Blade
+- Tailwind CSS
+- MySQL
+- Lucide Icons
+- Git & GitHub
 
-```bash
-composer require laravel/boost --dev
 
-php artisan boost:install
-```
 
-Boost provides your agent 15+ tools and skills that help agents build Laravel applications while following best practices.
 
-## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Base de données
 
-## Code of Conduct
+Le projet utilise les tables suivantes :
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+- users
+- events
+- reservations
+- tickets
 
-## Security Vulnerabilities
+Relations :
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+- Un utilisateur peut effectuer plusieurs réservations.
+- Un événement possède plusieurs réservations.
+- Une réservation possède un ticket.
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-=======
-# BDE-Events
->>>>>>> 8034b4b1cb49bb2957b2e6feaa71fed61f58465a
+ Diagrammes
+
+ Use Case
+
+<img width="518" height="393" alt="Screenshot 2026-07-20 123912" src="https://github.com/user-attachments/assets/da753a9f-9598-4255-9627-9f618ef2944d" />
+
+
+
+
+ Diagramme de classes
+
+
+<img width="412" height="386" alt="Screenshot 2026-07-21 133004" src="https://github.com/user-attachments/assets/f8136fda-aebb-4e5f-a97d-cf61e1d83f14" />
+
+
+ ERD
+
+<img width="353" height="340" alt="Screenshot 2026-07-21 144403" src="https://github.com/user-attachments/assets/8608049f-c72f-4f07-9db6-c7fc996dcf72" />
+
+** Réalisé par **
+
+**Samira Assemlali**
+
+Développeuse Web Full Stack Junior
+
+Projet réalisé dans le cadre de la formation **Développeur Web et Web Mobile** à l'ENAA.
